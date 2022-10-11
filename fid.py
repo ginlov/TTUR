@@ -20,13 +20,14 @@ from __future__ import absolute_import, division, print_function
 import numpy as np
 import os
 import gzip, pickle
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from imageio import imread
 from scipy import linalg
 import pathlib
 import urllib
 import warnings
 
+tf.disable_v2_behavior()
 class InvalidFIDException(Exception):
     pass
 
